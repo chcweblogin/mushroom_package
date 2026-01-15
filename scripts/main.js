@@ -3,12 +3,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.header');
 
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
+        if (window.scrollY > 20) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
         }
     });
+
+    // Mobile Menu Toggle
+    const mobileBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (mobileBtn && navLinks) {
+        mobileBtn.addEventListener('click', () => {
+            mobileBtn.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            document.body.classList.toggle('no-scroll'); // Optional: prevent body scroll
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+            });
+        });
+    }
 
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {

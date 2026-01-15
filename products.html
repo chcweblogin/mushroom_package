@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products - Mushroom Packaging®</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        /* specific overrides for products page */
+        .products-page-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 0;
+        }
+
+        .design-request-section {
+            background: var(--color-background-alt);
+            padding: 6rem 0;
+            margin-top: 4rem;
+        }
+
+        .design-form-container {
+            background: #fff;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .process-section {
+            padding: 6rem 0;
+            background: #fff;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .process-step {
+            text-align: center;
+        }
+
+        .process-step img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .process-step:hover img {
+            transform: translateY(-5px);
+        }
+
+        .process-step h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .process-step p {
+            color: var(--color-text);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .step-number {
+            display: inline-block;
+            background: var(--color-accent);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            line-height: 30px;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">Mushroom Packaging®</a>
+                <ul class="nav-links">
+                    <li><a href="index.html#why" class="nav-link">Why Mushroom</a></li>
+                    <li><a href="products.html" class="nav-link active">Products</a></li>
+                    <li><a href="index.html#custom" class="nav-link">Custom Design</a></li>
+                    <li><a href="index.html#journal" class="nav-link">Journal</a></li>
+                </ul>
+                <a href="index.html#contact-us" class="btn btn-primary">Get a Quote</a>
+                <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main style="padding-top: 100px;">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>All Packaging Solutions</h2>
+                <p>Sustainable, strong, and home-compostable protection for every product.</p>
+            </div>
+        </div>
+
+        <!-- Process Section -->
+        <section class="process-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>How It's Made</h2>
+                    <p>Grown from the earth, returned to the earth.</p>
+                </div>
+                <div class="process-grid">
+                    <div class="process-step">
+                        <img src="assets/images/process_step_1.png" alt="Hemp and Mycelium Mixture">
+                        <div class="step-number">1</div>
+                        <h3>The Mixture</h3>
+                        <p>We combine locally sourced hemp hurd (agricultural waste) with mushroom mycelium. This
+                            natural
+                            "glue" binds the hemp together.</p>
+                    </div>
+                    <div class="process-step">
+                        <img src="assets/images/process_step_2.png" alt="Filling the Mold">
+                        <div class="step-number">2</div>
+                        <h3>Molding</h3>
+                        <p>The mixture is filled into custom molds. Unlike plastic, no heat or high pressure is
+                            needed—just
+                            biology doing its work.</p>
+                    </div>
+                    <div class="process-step">
+                        <img src="assets/images/process_step_3.png" alt="Growing Phase">
+                        <div class="step-number">3</div>
+                        <h3>Growth</h3>
+                        <p>Over 4-6 days, the mycelium grows through the hemp, creating a solid, durable shape that is
+                            white
+                            and velvety.</p>
+                    </div>
+                    <div class="process-step">
+                        <img src="assets/images/process_step_4.png" alt="Curing and Finishing">
+                        <div class="step-number">4</div>
+                        <h3>Baking</h3>
+                        <p>The product is heated to stop growth and remove moisture. The result is a sterile, strong,
+                            water-resistant package ready to ship.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+
+            <div class="section-header" style="margin-top: 4rem;">
+                <h2>Catalog</h2>
+            </div>
+            <div class="products-page-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/wine_shipper_packaging.png" alt="Wine Shipper">
+                    </div>
+                    <div class="product-info">
+                        <h3>Wine Shipper</h3>
+                        <p>Protective casing for standard 750ml bottles. Shock-absorbing and thermal insulating.</p>
+                        <a href="index.html#contact-us" class="btn-link">Request Quote</a>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/candle_packaging.png" alt="Candle Box">
+                    </div>
+                    <div class="product-info">
+                        <h3>Candle Box</h3>
+                        <p>Secure fit for glass candle jars. Replaces styrofoam inserts perfectly.</p>
+                        <a href="index.html#contact-us" class="btn-link">Request Quote</a>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/corner_protector.png" alt="Corner Protectors">
+                    </div>
+                    <div class="product-info">
+                        <h3>Corner Protectors</h3>
+                        <p>Universal corner guards for furniture, electronics, and heavy items.</p>
+                        <a href="index.html#contact-us" class="btn-link">Request Quote</a>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/cosmetic_tray.png" alt="Cosmetic Tray">
+                    </div>
+                    <div class="product-info">
+                        <h3>Cosmetic Tray</h3>
+                        <p>Elegant, textured presentation for skincare and beauty sets.</p>
+                        <a href="index.html#contact-us" class="btn-link">Request Quote</a>
+                    </div>
+                </div>
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/tech_insert.png" alt="Tech Insert">
+                    </div>
+                    <div class="product-info">
+                        <h3>Tech Inserts</h3>
+                        <p>Precision molded trays for small electronics and accessories.</p>
+                        <a href="index.html#contact-us" class="btn-link">Request Quote</a>
+                    </div>
+                </div>
+                <!-- Product 6 (Duplicate for volume) -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/images/bottle_shipper.png" alt="Bottle Shipper">
+                    </div>
+                    <div class="product-info">
+                        <h3>Spirit Shipper</h3>
+                        <p>Heavy-duty protection for premium spirit bottles and decanters.</p>
+                        <a href="index.html#contact-us" class="btn-link">Request Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Custom Design Request Section -->
+        <section class="design-request-section">
+            <div class="container">
+                <div class="section-header" style="text-align: center; justify-content: center; margin-bottom: 3rem;">
+                    <h2>Design It Your Way</h2>
+                    <p>Don't see what you need? Request a custom mold tailored to your product.</p>
+                </div>
+
+                <div class="design-form-container">
+                    <form class="contact-form" action="https://formsubmit.co/pdate73@gmail.com" method="POST">
+                        <div class="form-group">
+                            <label for="custom-name">Name</label>
+                            <input type="text" id="custom-name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="custom-email">Email</label>
+                            <input type="email" id="custom-email" name="email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="design-type">Packaging Type</label>
+                            <select id="design-type" name="packaging_type" required>
+                                <option value="" disabled selected>Select packaging type</option>
+                                <option value="primary">Primary Packaging (Direct contact)</option>
+                                <option value="secondary">Secondary Packaging (Shipping)</option>
+                                <option value="display">Display / Retail</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="design-details">Describe Your Design Vision</label>
+                            <textarea id="design-details" name="design_details" rows="6"
+                                placeholder="Describe the shape, dimensions, and weight of your product. How do you want the unboxing experience to feel?"
+                                required></textarea>
+                            <input type="hidden" name="subject" value="New Custom Design Request">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_next" value="http://localhost:8080/products.html">
+                        </div>
+                        <button type="submit" class="btn btn-primary full-width">Submit Design Request</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Mushroom Packaging®</h3>
+                    <p>Sustainable, protective, and custom-molded packaging solutions.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="index.html#solutions">Stock Packaging</a></li>
+                        <li><a href="index.html#solutions">Sample Kits</a></li>
+                        <li><a href="index.html#contact">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="index.html#">About Us</a></li>
+                        <li><a href="index.html#">Sustainability</a></li>
+                        <li><a href="index.html#contact-us">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Stay Updated</h4>
+                    <p>Subscribe for updates on new products and sustainable tech.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mushroom Packaging. A clone project.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/chat.js"></script>
+</body>
+
+</html>
